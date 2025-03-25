@@ -1,0 +1,4 @@
+include ':Homer-Player-Classic'
+include ':Homer-Player-Classic:analytics-noop'
+include ':Homer-Player-Classic:crashreporting-noop'
+include ':Homer-Player-Classic:crashreporting-sentry'

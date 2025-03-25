@@ -1,4 +1,0 @@
-include ':app'
-include ':app:analytics-noop'
-include ':app:crashreporting-noop'
-include ':app:crashreporting-sentry'
