@@ -33,6 +33,7 @@
         android:theme="@style/AppThemeClassic"
         android:name=".HomerPlayerApplication"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
