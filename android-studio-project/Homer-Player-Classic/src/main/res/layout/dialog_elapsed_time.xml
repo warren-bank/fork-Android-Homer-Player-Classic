@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:gravity="center"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="top"
+        android:padding="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:textSize="@dimen/copyBooksInstructionTextSize"
+            android:text="@string/dialog_elapsed_time_to"/>
+
+        <EditText
+            android:id="@+id/newPositionHH"
+            android:inputType="number"
+            android:numeric="integer"
+            android:lines="1"
+            android:maxLength="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:textColor="?attr/playbackTextColor"
+            android:textSize="@dimen/bookListTextSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="?attr/playbackTextColor"
+            android:textSize="@dimen/bookListTextSize"
+            android:text=":"/>
+
+        <EditText
+            android:id="@+id/newPositionMM"
+            android:inputType="number"
+            android:numeric="integer"
+            android:lines="1"
+            android:maxLength="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:textColor="?attr/playbackTextColor"
+            android:textSize="@dimen/bookListTextSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="?attr/playbackTextColor"
+            android:textSize="@dimen/bookListTextSize"
+            android:text=":"/>
+
+        <EditText
+            android:id="@+id/newPositionSS"
+            android:inputType="number"
+            android:numeric="integer"
+            android:lines="1"
+            android:maxLength="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:textColor="?attr/playbackTextColor"
+            android:textSize="@dimen/bookListTextSize" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="top"
+        android:padding="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:textSize="@dimen/copyBooksInstructionTextSize"
+            android:text="@string/dialog_elapsed_time_of"/>
+
+        <TextView
+            android:id="@+id/totDurationHH"
+            android:lines="1"
+            android:maxLength="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:textColor="?attr/playbackTextColor"
+            android:textSize="@dimen/bookListTextSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="?attr/playbackTextColor"
+            android:textSize="@dimen/bookListTextSize"
+            android:text=":"/>
+
+        <TextView
+            android:id="@+id/totDurationMM"
+            android:lines="1"
+            android:maxLength="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:textColor="?attr/playbackTextColor"
+            android:textSize="@dimen/bookListTextSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="?attr/playbackTextColor"
+            android:textSize="@dimen/bookListTextSize"
+            android:text=":"/>
+
+        <TextView
+            android:id="@+id/totDurationSS"
+            android:lines="1"
+            android:maxLength="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:textColor="?attr/playbackTextColor"
+            android:textSize="@dimen/bookListTextSize" />
+
+    </LinearLayout>
+
+</LinearLayout>

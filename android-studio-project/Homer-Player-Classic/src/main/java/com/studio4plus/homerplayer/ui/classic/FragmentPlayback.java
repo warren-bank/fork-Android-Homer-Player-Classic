@@ -25,6 +25,7 @@ import com.studio4plus.homerplayer.GlobalSettings;
 import com.studio4plus.homerplayer.HomerPlayerApplication;
 import com.studio4plus.homerplayer.R;
 import com.studio4plus.homerplayer.crashreporting.CrashReporting;
+import com.studio4plus.homerplayer.ui.ElapsedTimeViewLongClickListener;
 import com.studio4plus.homerplayer.ui.FFRewindTimer;
 import com.studio4plus.homerplayer.ui.HintOverlay;
 import com.studio4plus.homerplayer.ui.PressReleaseDetector;
@@ -89,6 +90,9 @@ public class FragmentPlayback extends Fragment implements FFRewindTimer.Observer
                 elapsedTimeRewindFFView.setLayoutParams(params);
             }
         });
+
+        if (controller != null)
+            setElapsedTimeViewLongClickListener();
 
         // Don't let any events "through" overlays.
         View.OnTouchListener capturingListener = (v, event) -> true;
@@ -276,6 +280,16 @@ public class FragmentPlayback extends Fragment implements FFRewindTimer.Observer
 
     void setController(@NonNull UiControllerPlayback controller) {
         this.controller = controller;
+
+        if (elapsedTimeView != null)
+            setElapsedTimeViewLongClickListener();
+    }
+
+    private void setElapsedTimeViewLongClickListener() {
+        elapsedTimeView.setLongClickable(true);
+        elapsedTimeView.setOnLongClickListener(
+            new ElapsedTimeViewLongClickListener(view.getContext(), controller)
+        );
     }
 
     private class RewindFFHandler implements PressReleaseDetector.Listener {

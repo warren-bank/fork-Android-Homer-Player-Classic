@@ -163,6 +163,44 @@ public class UiControllerPlayback {
                 audioManager.getStreamVolume(stream));
     }
 
+    public long getTotalDurationMs() {
+        try {
+            if (isPlaybackStopped()) throw new Exception();
+
+            return playbackService.getAudioBookBeingPlayed().getTotalDurationMs();
+        }
+        catch(Exception e) {
+            return 0L;
+        }
+    }
+
+    public long getCurrentTotalPositionMs() {
+        try {
+            if (isPlaybackStopped()) throw new Exception();
+
+            return playbackService.getCurrentTotalPositionMs();
+        }
+        catch(Exception e) {
+            return 0L;
+        }
+    }
+
+    public void updateTotalPosition(long totalPositionMs) {
+        if (isPlaybackStopped()) return;
+        try {
+            long totalDurationMs = getTotalDurationMs();
+
+            if (totalPositionMs < 0L)
+                totalPositionMs = 0L;
+
+            if (totalPositionMs > totalDurationMs)
+                totalPositionMs = totalDurationMs;
+
+            playbackService.getAudioBookBeingPlayed().updateTotalPosition(totalPositionMs);
+        }
+        catch(Exception e) {}
+    }
+
     private void adjustVolume(int direction) {
         int stream = AudioManager.STREAM_MUSIC;
         audioManager.adjustStreamVolume(stream, direction, 0);

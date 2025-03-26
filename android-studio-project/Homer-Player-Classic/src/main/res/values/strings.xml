@@ -85,4 +85,8 @@
     <string name="samplesDownloadErrorMessage">Download and installation failed.</string>
     <string name="samplesDownloadProgressTitle">Downloading…</string>
     <string name="samplesDownloadNotificationTitle">Audiobook samples for Homer Player</string>
+
+    <string name="dialog_elapsed_time_title">Seek</string>
+    <string name="dialog_elapsed_time_to">To:</string>
+    <string name="dialog_elapsed_time_of">Of:</string>
 </resources>
