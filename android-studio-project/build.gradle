@@ -29,8 +29,8 @@ allprojects {
 }
 
 ext {
-    versionName = "1.0.10-fork-0.0.1"
-    versionCode = 77
+    versionName = "1.0.10-fork-0.0.2-21API"
+    versionCode = 78
     minSdkVersion = 21
     targetSdkVersion = 33
     compileSdkVersion = 33
