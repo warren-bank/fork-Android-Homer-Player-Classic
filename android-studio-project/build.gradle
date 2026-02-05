@@ -30,8 +30,8 @@ allprojects {
 
 ext {
     applicationId      = "com.studio4plus.homerplayer"
-    versionName        = "1.0.10-fork-0.0.2-21API"
-    versionCode        = 78
+    versionName        = "1.0.10-fork-0.0.3-21API"
+    versionCode        = 79
     minSdkVersion      = 21
     targetSdkVersion   = 35
     compileSdkVersion  = 35
