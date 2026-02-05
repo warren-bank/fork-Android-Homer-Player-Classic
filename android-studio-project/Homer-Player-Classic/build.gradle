@@ -125,6 +125,7 @@ android.applicationVariants.all { variant ->
         }
 
         tasks.named("assemble${variantName}").get().dependsOn(tasks.named("generateProvisioningData${variantName}"))
+        tasks.named("create${variantName}ApkListingFileRedirect").get().dependsOn(tasks.named("generateProvisioningData${variantName}"))
     }
 }
 
