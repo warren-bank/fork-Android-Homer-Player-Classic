@@ -154,8 +154,11 @@ dependencies {
 
     // -------------------------------------------
     // https://jitpack.io/#MFlisar/Lumberjack
-    //   5.2.5 build failed
-    //   6.0.2 is the next successful build
+    // https://jitpack.io/com/github/MFlisar/Lumberjack/
+    // https://jitpack.io/com/github/MFlisar/Lumberjack/5.0.3/build.log
+    // https://jitpack.io/com/github/MFlisar/Lumberjack/lumberjack-library/5.0.3/lumberjack-library-5.0.3.aar
+    // https://jitpack.io/com/github/MFlisar/Lumberjack/lumberjack-filelogger/5.0.3/lumberjack-filelogger-5.0.3.aar
+    // https://jitpack.io/com/github/MFlisar/Lumberjack/lumberjack-java-wrapper/5.0.3/lumberjack-java-wrapper-5.0.3.aar
     // -------------------------------------------
     implementation "com.github.MFlisar.Lumberjack:lumberjack-library:${rootProject.ext.version_lumberjack}"
     implementation "com.github.MFlisar.Lumberjack:lumberjack-filelogger:${rootProject.ext.version_lumberjack}"

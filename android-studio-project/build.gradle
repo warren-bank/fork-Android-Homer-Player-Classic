@@ -38,5 +38,5 @@ ext {
     buildToolsVersion  = "35.0.0"
     javaVersion        = JavaVersion.VERSION_1_8
     version_appcompat  = "1.5.1"
-    version_lumberjack = "5.1.5"
+    version_lumberjack = "5.0.3"
 }
