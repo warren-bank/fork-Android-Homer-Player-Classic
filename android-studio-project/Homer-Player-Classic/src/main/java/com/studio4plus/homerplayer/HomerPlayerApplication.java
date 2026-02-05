@@ -98,7 +98,9 @@ public class HomerPlayerApplication extends MultiDexApplication {
     private void onUpdate(long previousVersionCode) {
         if (previousVersionCode < 56) {
             globalSettings.setVolumeControlsEnabled(false);
-        } else if (previousVersionCode < 63) {
+        }
+
+        if ((previousVersionCode < 63) && (Build.VERSION.SDK_INT <= 29)) {
             globalSettings.setLegacyFileAccessMode(true);
         }
     }
