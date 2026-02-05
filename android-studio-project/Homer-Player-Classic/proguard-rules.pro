@@ -25,6 +25,10 @@
 # are not recognized by ProGuard as being used and are removed. Keep them.
 -keep class com.studio4plus.homerplayer.ui.settings.**
 
+# https://github.com/MFlisar/Lumberjack/issues/16
+# https://github.com/tony19/logback-android/issues/344
+-keepclassmembers class ch.qos.logback.core.rolling.helper.* { <init>(); }
+
 # Guava
 -dontwarn sun.misc.Unsafe
 ## https://github.com/google/guava/issues/2926#issuecomment-325455128
