@@ -7,7 +7,7 @@ buildscript {
         maven { url "https://jitpack.io" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.android.tools.build:gradle:8.7.2'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -29,10 +29,14 @@ allprojects {
 }
 
 ext {
-    versionName = "1.0.10-fork-0.0.2-21API"
-    versionCode = 78
-    minSdkVersion = 21
-    targetSdkVersion = 33
-    compileSdkVersion = 33
-    version_appcompat = "1.5.1"
+    applicationId      = "com.studio4plus.homerplayer"
+    versionName        = "1.0.10-fork-0.0.2-21API"
+    versionCode        = 78
+    minSdkVersion      = 21
+    targetSdkVersion   = 35
+    compileSdkVersion  = 35
+    buildToolsVersion  = "35.0.0"
+    javaVersion        = JavaVersion.VERSION_1_8
+    version_appcompat  = "1.5.1"
+    version_lumberjack = "5.1.5"
 }

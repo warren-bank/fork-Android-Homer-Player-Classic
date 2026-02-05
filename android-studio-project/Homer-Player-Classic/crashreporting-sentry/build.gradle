@@ -3,6 +3,8 @@ plugins {
 }
 
 android {
+    namespace 'com.studio4plus.homerplayer.crashreporting'
+
     compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {

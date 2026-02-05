@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.studio4plus.homerplayer.crashreporting'
+
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {

@@ -26,21 +26,25 @@ static def computeApkChecksum(file) {
 }
 
 android {
+    namespace rootProject.ext.applicationId
+
     useLibrary 'org.apache.http.legacy'
 
     compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility rootProject.ext.javaVersion
+        targetCompatibility rootProject.ext.javaVersion
     }
 
     buildFeatures {
+        buildConfig true
         viewBinding true
     }
 
     defaultConfig {
-        applicationId    "com.studio4plus.homerplayer"
+        applicationId    rootProject.ext.applicationId
         versionName      rootProject.ext.versionName
         versionCode      rootProject.ext.versionCode
         minSdkVersion    rootProject.ext.minSdkVersion
@@ -75,6 +79,11 @@ android {
         playStore {
             dimension 'releaseType'
         }
+    }
+
+    dependenciesInfo {
+        includeInApk    = false  // Disables dependency metadata when building APKs.
+        includeInBundle = false  // Disables dependency metadata when building Android App Bundles.
     }
 }
 
@@ -148,10 +157,9 @@ dependencies {
     //   5.2.5 build failed
     //   6.0.2 is the next successful build
     // -------------------------------------------
-    def lumberjackVersion = '5.1.5'
-    implementation "com.github.MFlisar.Lumberjack:lumberjack-library:$lumberjackVersion"
-    implementation "com.github.MFlisar.Lumberjack:lumberjack-filelogger:$lumberjackVersion"
-    implementation "com.github.MFlisar.Lumberjack:lumberjack-java-wrapper:$lumberjackVersion"
+    implementation "com.github.MFlisar.Lumberjack:lumberjack-library:${rootProject.ext.version_lumberjack}"
+    implementation "com.github.MFlisar.Lumberjack:lumberjack-filelogger:${rootProject.ext.version_lumberjack}"
+    implementation "com.github.MFlisar.Lumberjack:lumberjack-java-wrapper:${rootProject.ext.version_lumberjack}"
 
     developmentImplementation project(':Homer-Player-Classic:crashreporting-noop')
     gitHubImplementation project(':Homer-Player-Classic:crashreporting-noop')

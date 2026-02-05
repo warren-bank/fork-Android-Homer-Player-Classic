@@ -50,11 +50,13 @@
 
         <activity
             android:name=".ui.settings.SettingsActivity"
-            android:label="@string/settings_title" />
+            android:label="@string/settings_title"
+            android:exported="false" />
 
         <activity
             android:name=".ui.settings.SettingsFoldersActivity"
-            android:label="@string/settings_folders_title" />
+            android:label="@string/settings_folders_title"
+            android:exported="false" />
 
         <activity
             android:name=".ui.HomeActivity"
