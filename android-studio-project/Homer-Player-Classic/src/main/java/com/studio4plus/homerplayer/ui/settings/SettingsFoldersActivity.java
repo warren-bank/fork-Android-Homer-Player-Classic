@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -45,7 +46,9 @@ public class SettingsFoldersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         applySettingsTheme();
         FoldersActivityBinding views = FoldersActivityBinding.inflate(LayoutInflater.from(this));
-        setContentView(views.getRoot());
+        View view = views.getRoot();
+        if (view != null) view.setFitsSystemWindows(true); // fix for Android 15+ edge-to-edge layout enforcement
+        setContentView(view);
 
         HomerPlayerApplication.getComponent(this).inject(this);
         openDocumentTreeContract = registerForActivityResult(
